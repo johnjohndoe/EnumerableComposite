@@ -38,13 +38,13 @@
 
 - (void)addFoo:(id<FooProtocol>)foo {
 
-	[NSException raise:@"UnsupportedOperationException" format:@"UnsupportedOperationException: The selector %@ cannot be used on the object %@.", NSStringFromSelector(_cmd), self];
+	UnsupportedOperationException(self,_cmd);
 }
 
 
 - (void)removeFoo:(id<FooProtocol>)foo {
 	
-	[NSException raise:@"UnsupportedOperationException" format:@"UnsupportedOperationException: The selector %@ cannot be used on the object %@.", NSStringFromSelector(_cmd), self];
+	UnsupportedOperationException(self,_cmd);
 }
 
 - (NSString*)description {
@@ -58,7 +58,7 @@
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState*)state objects:(id*)stackbuf count:(NSUInteger)len {
 
 	// The exception can be uncommented. Returning zero is an option depending on the way you want to use the class.
-	[NSException raise:@"UnsupportedOperationException" format:@"UnsupportedOperationException: The selector %@ cannot be used on the object %@.", NSStringFromSelector(_cmd), self];
+	UnsupportedOperationException(self,_cmd);
 	return 0;
 }
 

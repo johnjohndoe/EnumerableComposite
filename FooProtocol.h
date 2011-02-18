@@ -9,6 +9,13 @@
 #import <Cocoa/Cocoa.h>
 
 
+#define UnsupportedOperationException(obj,sel) { \
+	[NSException raise:@"UnsupportedOperationException" \
+				format:@"UnsupportedOperationException: The selector %@ cannot be used on the object %@.", \
+						NSStringFromSelector(sel), obj]; \
+}
+
+
 @protocol FooProtocol<NSFastEnumeration>
 
 - (void)addFoo:(id<FooProtocol>)foo;
