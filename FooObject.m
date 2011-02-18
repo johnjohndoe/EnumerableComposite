@@ -47,6 +47,12 @@
 	UnsupportedOperationException(self,_cmd);
 }
 
+- (id<FooProtocol>)findFoo:(id<FooProtocol>)foo {
+	
+	UnsupportedOperationException(self,_cmd);
+	return nil;
+}
+
 - (NSString*)description {
 	
 	return m_name;

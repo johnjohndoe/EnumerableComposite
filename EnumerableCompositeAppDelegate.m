@@ -63,6 +63,25 @@
 	for (id<FooProtocol> foo in flist) {
 		NSLog(@"--- %@", foo); /* DEBUG LOG */
 	}
+	
+
+	NSLog(@"Found f1 in list? --> %@", [flist findFoo:[[FooObject alloc] initWithName:@"f1"]]); /* DEBUG LOG */
+	NSLog(@"Found f2 in list? --> %@", [flist findFoo:[[FooObject alloc] initWithName:@"f2"]]); /* DEBUG LOG */
+
+	@try {
+		NSLog(@"Found f2 in f1? --> %@", [f1 findFoo:[[FooObject alloc] initWithName:@"f2"]]); /* DEBUG LOG */
+	}
+	@catch (NSException * e) {
+		NSLog(@"%@", e); /* DEBUG LOG */
+	}
+	
+	@try {
+		NSLog(@"Found flist in flist? --> %@", [flist findFoo:[[FooCollection alloc] init]]); /* DEBUG LOG */
+	}
+	@catch (NSException * e) {
+		NSLog(@"%@", e); /* DEBUG LOG */
+	}
+	
 }
 
 @end

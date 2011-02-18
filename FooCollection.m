@@ -35,6 +35,18 @@
 	
 	[m_foos removeObject:foo];
 }
+	 
+- (id<FooProtocol>)findFoo:(id<FooProtocol>)foo {
+	
+	NSEnumerator* enumerator = [m_foos objectEnumerator];
+	id<FooProtocol> found = nil;
+	while ((found = [enumerator nextObject])) {
+		if ([found isEqual:foo]) {
+			break;
+		}
+	}
+	return found;
+}
 
 - (NSString*)description {
 	
@@ -44,6 +56,29 @@
 		[desc appendString:@", "];
 	}
 	return desc;
+}
+
+#pragma mark -
+#pragma mark Comparison
+
+- (BOOL)isEqual:(id)other {
+	
+	if (other == self) {
+		return YES;
+	}
+	if (!other || ![other isKindOfClass:[self class]]) {
+		return NO;
+	}
+	if ([self hash] == [other hash]) {
+		return YES;
+	}
+	return NO;
+}
+
+
+- (NSUInteger)hash {
+	
+	return [m_foos hash];
 }
 
 #pragma mark -

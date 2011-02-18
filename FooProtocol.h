@@ -20,6 +20,9 @@
 
 - (void)addFoo:(id<FooProtocol>)foo;
 - (void)removeFoo:(id<FooProtocol>)foo;
+- (id<FooProtocol>)findFoo:(id<FooProtocol>)foo;
+- (BOOL)isEqual:(id)other;
+- (NSUInteger)hash;
 - (NSString*)description;
 
 @end
