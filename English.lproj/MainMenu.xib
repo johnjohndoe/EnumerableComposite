@@ -1331,7 +1331,7 @@
 				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
 			</object>
 			<object class="NSCustomObject" id="976324537">
-				<string key="NSClassName">TestEnumerableAppDelegate</string>
+				<string key="NSClassName">EnumerableCompositeAppDelegate</string>
 			</object>
 			<object class="NSCustomObject" id="755631768">
 				<string key="NSClassName">NSFontManager</string>
@@ -3596,7 +3596,7 @@
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
-					<string key="className">TestEnumerableAppDelegate</string>
+					<string key="className">EnumerableCompositeAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">window</string>
@@ -3604,7 +3604,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">TestEnumerableAppDelegate.h</string>
+						<string key="minorKey">EnumerableCompositeAppDelegate.h</string>
 					</object>
 				</object>
 			</object>
